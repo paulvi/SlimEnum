@@ -2,7 +2,8 @@
 is an enum as we know it, a fat-free alternative to Java enums. It's utilize annotations construction to provide required enum
       functionality over any, even primitive(byte,int..etc.), data types. This plugin bring support SlimEnum to the IDE and
       make using it easy and efficiently. Compile by yourself or just download SlimEnum.jar and install as plugin to the Android Studio / IDEA.
-SlimEnum uses annotations with defined constant in the body as named constants set. Constants type is define to wich type this constants set can be applyed. SlimEnums can be nested. 
+SlimEnum uses annotation declaration with defined constant in their body, as named constants set for certain type. Constants type is define to wich type this constants set can be applyed. SlimEnums can be nested.
+
 ```java
       public @interface Font {
 		@interface Foreground {
@@ -45,3 +46,24 @@ SlimEnum uses annotations with defined constant in the body as named constants s
 				Dialog = "Dialog";
 	}
 ```
+
+apply it
+
+```java
+class Test {
+	@Font String name;
+	@Font.Foreground int fg;
+
+	@Font.Background int setBackground(@Font.Background int bg) {
+		return bg;
+	}
+}
+
+static void createFont(@Font String name, @Font byte style, @Font.Background int background, @Font.Foreground int foregraund) {
+
+}
+```
+
+and use it
+
+
