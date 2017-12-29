@@ -66,4 +66,36 @@ static void createFont(@Font String name, @Font byte style, @Font.Background int
 
 and use it
 
-
+```java
+		createFont(Font.Monospaced + Font.HonMincho + Font.Serif, Font.BLINK, Font.Background.CYAN, Font.Foreground.BLACK);
+		@Font String         name = Font.Dialog;
+		@Font byte           type = Font.NORMAL | Font.BOLD | Font.INVERSE;
+		@Font.Foreground int fg   = Font.Foreground.BLUE;
+		
+		Test test = new Test();
+		test.setBackground(Font.Background.BLUE);
+		test.fg = Font.Foreground.BLUE | Font.Foreground.CYAN | Font.Foreground.MAGENTA;
+		
+		test.fg = Font.Foreground.BLUE;
+		
+		if (type == (Font.NORMAL | Font.BOLD | Font.INVERSE | Font.BLINK) && test.setBackground(Font.Background.BLUE) == Font.Background.RED)
+		{
+			@Font.Foreground int fgw = 3;
+		}
+		assert (test.setBackground(Font.Background.BLUE) == (Font.Background.CYAN | Font.Background.DEFAULT));
+		
+		if (test.fg == Font.NORMAL && test.fg != Font.NORMAL) {
+			
+		}
+		
+		
+		switch (test.setBackground(Font.Background.BLUE))
+		{
+			case Font.Background.BLUE:
+				break;
+			case Font.Background.CYAN:
+				break;
+			
+		}
+```
+SlimEnum plugin will recognise applyed annotation and data type and provide correct code completion.
