@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>org.unirail.SlimEnum</id>
+  <name>SlimEnum</name>
+  <version>1.0</version>
+  <vendor email="info@unirail.org" url="http://www.unirail.org">Unirail</vendor>
+
+  <description><![CDATA[
+      SlimEnum - is enum as we know it, a fat-free alternative to Java enums. It's utilize annotations construction to provide required enum
+      functionality over any, even primitive(byte,int..etc.), data types. This plugin bring support SlimEnum to the IDE and
+      make using it easy and efficiently.
+
+    ]]></description>
+
+  <change-notes><![CDATA[
+
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <completion.contributor language="JAVA"    implementationClass="org.unirail.SlimEnum.SlimEnumCompelition"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
