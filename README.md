@@ -7,7 +7,7 @@ is an enum as we know it, a fat-free alternative to Java enums. It's utilize ann
       
       
       
-      '''
+      '''Java
       
       public @interface Font {
 		@interface Foreground {
