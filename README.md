@@ -5,9 +5,11 @@ is an enum as we know it, a fat-free alternative to Java enums. It's utilize ann
       
       
       ```ruby
+      
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
+
 ```
       
       
