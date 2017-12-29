@@ -98,4 +98,4 @@ and use it
 			
 		}
 ```
-SlimEnum plugin will recognise applyed annotation and data type and provide correct code completion.
+SlimEnum plugin can recognize applyed to the variable annotation and data type and provide correct constants set for code completion.
