@@ -3,15 +3,7 @@ is an enum as we know it, a fat-free alternative to Java enums. It's utilize ann
       functionality over any, even primitive(byte,int..etc.), data types. This plugin bring support SlimEnum to the IDE and
       make using it easy and efficiently. Compile by yourself or just download SlimEnum.jar and install as plugin to the Android Studio / IDEA.
       
-     ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-     
-     
-     
-      ```
-      
+```java
       public @interface Font {
 		@interface Foreground {
 			int BLACK = 0,
@@ -52,5 +44,4 @@ alert(s);
 				Monospaced = "Monospaced",
 				Dialog = "Dialog";
 	}
-      
-     ```
+```
