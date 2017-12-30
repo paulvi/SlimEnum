@@ -14,7 +14,6 @@ import com.intellij.util.ProcessingContext;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Vector;
 import java.util.stream.Collectors;
 
@@ -76,14 +75,18 @@ public class SlimEnumCompelition extends CompletionContributor {
 				{
 					PsiBinaryExpression pbe = (PsiBinaryExpression) scope;// PsiTreeUtil.getParentOfType(position, PsiBinaryExpression.class);
 					
-					PsiAnnotation[] annotations = null;
-					PsiType         type        = null;
+					while(pbe.getLOperand() instanceof PsiBinaryExpression)
+						pbe = (PsiBinaryExpression)pbe.getLOperand();
 					
-					Collection<PsiReferenceExpression> ref = PsiTreeUtil.findChildrenOfType(pbe.getLOperand(), PsiReferenceExpression.class);
 					
-					if (0 < ref.size())
+					
+					if (pbe.getLOperand() instanceof PsiReferenceExpression)
 					{
-						PsiElement elem = ref.iterator().next().resolve();
+						PsiReferenceExpression ref = (PsiReferenceExpression) pbe.getLOperand();
+						PsiAnnotation[] annotations = null;
+						PsiType         type        = null;
+						
+						PsiElement elem = ref.resolve();
 						if (elem instanceof PsiVariable)
 						{
 							PsiVariable dst = (PsiVariable) elem;
@@ -104,8 +107,9 @@ public class SlimEnumCompelition extends CompletionContributor {
 								tryPsiMethodCallExpression(position, pos, resultSet);
 								return;
 							}
-						fill(resultSet, annotations, type, excludes(pbe.getROperand()));
+						fill(resultSet, annotations, type, excludes(scope));
 					}
+					
 					return;
 				}
 				
