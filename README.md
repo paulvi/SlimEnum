@@ -46,7 +46,7 @@ SlimEnum uses annotation declaration with defined constant in their body, as nam
 	}
 ```
 
-apply it to variables, fields, methods return type and metho arguments
+apply it to variables, fields, methods return type and method arguments
 
 ```java
 class Test {
