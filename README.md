@@ -97,4 +97,4 @@ and use it
 			
 		}
 ```
-SlimEnum plugin can recognize applyed to variables annotation, data type, and provide correct constants set for the code completion.
+SlimEnum plugin can recognize applied to variables annotation, data type, and provide correct constants set for the code completion.
