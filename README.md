@@ -1,7 +1,7 @@
 # SlimEnum - 
-is an enum as we know it, a [fat-free alternative to Java enums.](https://youtu.be/Hzs6OBcvNQE) SlimEnum utilize annotations construction, but in contrast with Android [IntDef](https://developer.android.com/reference/android/support/annotation/IntDef.html) it fill annotation body to provide required enum functionality over any, even primitive(byte,int..etc.), data types. This plugin bring support SlimEnum to the IDE and
+is the enum as we know it, a [fat-free alternative to Java enums.](https://youtu.be/Hzs6OBcvNQE) SlimEnum utilize annotations construction, but in contrast with Android [IntDef](https://developer.android.com/reference/android/support/annotation/IntDef.html) it fill annotation body with constants to provide required enum functionality over any, even primitive(byte,int..etc.), data types. This plugin bring support SlimEnum to the IDE and
       make using it easy and efficiently. Compile by yourself or just download SlimEnum.jar and install as plugin to the Android Studio / IDEA.
-SlimEnum uses annotation declaration with defined constant in their body, as named constants set for certain type. Constants type is define to wich type this constants set can be applyed. SlimEnums can be nested.
+SlimEnum uses annotation declaration with defined constant in their body, as named constants set for **certain type**. Constants type is define to wich type this constants set can be applyed. SlimEnums can be nested.
 
 ```java
       public @interface Font {
@@ -97,4 +97,4 @@ and use it
 			
 		}
 ```
-SlimEnum plugin can recognize applyed to variables annotation and data type, and provide correct constants set for code completion.
+SlimEnum plugin can recognize applyed to variables annotation, data type, and provide correct constants set for the code completion.
