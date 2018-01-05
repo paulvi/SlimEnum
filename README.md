@@ -98,3 +98,4 @@ and use it
 		}
 ```
 SlimEnum plugin can recognize applied to variables annotation, data type, and provide correct constants set for the code completion.
+It is available in [Intellij plugin repository](https://plugins.jetbrains.com/plugin/10316-slimenum)
